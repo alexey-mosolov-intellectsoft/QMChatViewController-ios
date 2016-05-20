@@ -13,25 +13,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="253" height="183"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KAl-F5-usR" userLabel="Avatar Container">
-                        <rect key="frame" x="209" y="0.0" width="44" height="45"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TG7-Nv-KYM" userLabel="Avatar Image View" customClass="QMImageView">
-                                <rect key="frame" x="0.0" y="0.0" width="44" height="45"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="TG7-Nv-KYM" secondAttribute="trailing" id="BRd-Bn-SYB"/>
-                            <constraint firstAttribute="width" constant="44" id="Z8f-dc-CD6"/>
-                            <constraint firstAttribute="bottom" secondItem="TG7-Nv-KYM" secondAttribute="bottom" id="bnh-4I-kTM"/>
-                            <constraint firstItem="TG7-Nv-KYM" firstAttribute="top" secondItem="KAl-F5-usR" secondAttribute="top" id="jLg-KF-9Lz"/>
-                            <constraint firstItem="TG7-Nv-KYM" firstAttribute="leading" secondItem="KAl-F5-usR" secondAttribute="leading" id="mFu-hA-HEo"/>
-                            <constraint firstAttribute="height" constant="45" id="spf-dw-DvB"/>
-                        </constraints>
-                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mlp-Ig-WT7" userLabel="ContainerView" customClass="QMChatContainerView">
-                        <rect key="frame" x="26" y="0.0" width="181" height="183"/>
+                        <rect key="frame" x="26" y="0.0" width="227" height="183"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aUM-zm-5ky" userLabel="Message Container">
                                 <rect key="frame" x="4" y="4" width="165" height="175"/>
@@ -82,14 +65,35 @@
                                     <constraint firstItem="Tve-03-DKT" firstAttribute="top" secondItem="diF-ca-yd3" secondAttribute="bottom" id="xs4-sc-NTj"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KAl-F5-usR" userLabel="Avatar Container">
+                                <rect key="frame" x="177" y="6" width="44" height="45"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TG7-Nv-KYM" userLabel="Avatar Image View" customClass="QMImageView">
+                                        <rect key="frame" x="0.0" y="0.0" width="44" height="45"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="TG7-Nv-KYM" secondAttribute="trailing" id="BRd-Bn-SYB"/>
+                                    <constraint firstAttribute="width" constant="44" id="Z8f-dc-CD6"/>
+                                    <constraint firstAttribute="bottom" secondItem="TG7-Nv-KYM" secondAttribute="bottom" id="bnh-4I-kTM"/>
+                                    <constraint firstItem="TG7-Nv-KYM" firstAttribute="top" secondItem="KAl-F5-usR" secondAttribute="top" id="jLg-KF-9Lz"/>
+                                    <constraint firstItem="TG7-Nv-KYM" firstAttribute="leading" secondItem="KAl-F5-usR" secondAttribute="leading" id="mFu-hA-HEo"/>
+                                    <constraint firstAttribute="height" constant="45" id="spf-dw-DvB"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="aUM-zm-5ky" secondAttribute="bottom" constant="4" id="5Sz-rW-mKf"/>
                             <constraint firstItem="aUM-zm-5ky" firstAttribute="top" secondItem="mlp-Ig-WT7" secondAttribute="top" constant="4" id="5b4-p7-Dki"/>
                             <constraint firstAttribute="trailing" secondItem="aUM-zm-5ky" secondAttribute="trailing" constant="12" id="FuO-6F-2wi"/>
+                            <constraint firstItem="KAl-F5-usR" firstAttribute="top" secondItem="mlp-Ig-WT7" secondAttribute="top" constant="6" id="RGO-NT-R2F"/>
+                            <constraint firstItem="KAl-F5-usR" firstAttribute="leading" secondItem="aUM-zm-5ky" secondAttribute="trailing" constant="8" id="gZF-9t-fsn"/>
                             <constraint firstItem="aUM-zm-5ky" firstAttribute="leading" secondItem="mlp-Ig-WT7" secondAttribute="leading" constant="4" id="hqh-sL-9vc"/>
                             <constraint firstAttribute="width" constant="181" id="jtP-rm-saS"/>
+                            <constraint firstAttribute="trailing" secondItem="KAl-F5-usR" secondAttribute="trailing" constant="6" id="oC9-tB-VP2"/>
+                            <constraint firstAttribute="width" constant="227" id="zuj-py-cPi"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
@@ -107,24 +111,22 @@
                                 <size key="value" width="8" height="8"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="jtP-rm-saS"/>
+                                <exclude reference="FuO-6F-2wi"/>
+                            </mask>
+                        </variation>
                     </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <constraints>
-                <constraint firstItem="KAl-F5-usR" firstAttribute="leading" secondItem="mlp-Ig-WT7" secondAttribute="trailing" constant="2" id="CRC-3V-ysb"/>
-                <constraint firstAttribute="trailing" secondItem="KAl-F5-usR" secondAttribute="trailing" id="OFd-mn-Trv"/>
-                <constraint firstAttribute="bottom" secondItem="KAl-F5-usR" secondAttribute="bottom" id="chG-tq-vW7"/>
+                <constraint firstAttribute="trailing" secondItem="mlp-Ig-WT7" secondAttribute="trailing" id="5gg-jH-U3N"/>
                 <constraint firstItem="mlp-Ig-WT7" firstAttribute="top" secondItem="vDG-KF-S8V" secondAttribute="top" id="hdz-W0-txv"/>
                 <constraint firstAttribute="bottom" secondItem="mlp-Ig-WT7" secondAttribute="bottom" id="lOt-4R-bff"/>
-                <constraint firstItem="KAl-F5-usR" firstAttribute="top" secondItem="vDG-KF-S8V" secondAttribute="top" id="oJy-q8-uYv"/>
             </constraints>
             <size key="customSize" width="253" height="183"/>
-            <variation key="default">
-                <mask key="constraints">
-                    <exclude reference="chG-tq-vW7"/>
-                </mask>
-            </variation>
             <connections>
                 <outlet property="attachmentImageView" destination="Tve-03-DKT" id="3oZ-VO-ymz"/>
                 <outlet property="avatarContainerViewHeightConstraint" destination="spf-dw-DvB" id="Snn-K2-i2s"/>
